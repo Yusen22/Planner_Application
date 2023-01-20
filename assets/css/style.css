@@ -23,6 +23,10 @@ textarea {
   border-bottom: 10px solid black;
 }
 
+.container-fluid {
+  width: 83%;
+}
+
 .description {
   white-space: pre-wrap;
 }
@@ -32,10 +36,14 @@ textarea {
   border-radius: 15px;
 }
 
+/* added flex justify cont and border radius */
+
 .row {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   justify-content: space-between;
 }
 
@@ -66,13 +74,17 @@ textarea {
   color: white;
 }
 
+/* standard width and height for block */
+
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  height: 80px;
   width: 80px;
+
 }
 
 .saveBtn i:hover {
