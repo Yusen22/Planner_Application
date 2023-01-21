@@ -127,3 +127,9 @@ textarea:focus {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.clearRow {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}

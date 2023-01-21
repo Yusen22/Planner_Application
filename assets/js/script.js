@@ -13,6 +13,9 @@ var currTime = parseInt(moment().format("HH"));
 var rows = $('.row')
 
 $(function () {
+
+
+    // $('.clearRow').append('<button class="btn btn-danger" id= "clear-button">Clear All Tasks</button>');
     
 
     var textArea = $('<textarea class ="description" name ="description" cols = "3" wrap="hard">');
@@ -43,13 +46,13 @@ $(function () {
 
         currentRow.children('textarea').text(localPull);
     }
+
+    
 })
 
 
 
 $('.saveBtn').on('click', function() {
-
-    
 
     var rowToSave = $(this).closest('.row');
     console.log("Row to save is " + rowToSave.attr('data-number'));
@@ -62,6 +65,7 @@ $('.saveBtn').on('click', function() {
     var storageBlock = rowToSave.attr('data-number')
     localStorage.setItem(storageBlock, saveText)
 })
+
 
 
 
