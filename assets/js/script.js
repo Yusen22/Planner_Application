@@ -34,18 +34,34 @@ $(function () {
         } else if (dataNum > currentTime) {
             currentRow.addClass("future")
         }
+
+        stringedNum = (9 + i).toString();
+        localPull = localStorage.getItem(stringedNum)
+
+        currentRow.children('textarea').text(localPull);
     }
 })
 
 
 
 $('.saveBtn').on('click', function() {
+
+    
+
     rowToSave = $(this).closest('.row');
-    console.log("Row to save is ")
+    console.log("Row to save is " + rowToSave.attr('data-number'));
     saveText = rowToSave.children('.description').val();
+    if (saveText == "") {
+        alert("This timeblock is empty!")
+    } else {
+        alert("You've saved the task " + "'" + saveText + "'" + " at " + rowToSave.attr('id'))
+    }
     var storageBlock = rowToSave.attr('data-number')
     localStorage.setItem(storageBlock, saveText)
 })
+
+var localPull 
+var stringedNum
 
 var saveText
 var rowToSave
