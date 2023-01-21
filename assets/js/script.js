@@ -12,6 +12,9 @@ var rows = $('.row')
 
 $(function () {
 
+    var textArea = $('<textarea class="description">');
+        textArea.insertBefore(".saveBtn");
+
     var currentTime = parseInt(moment().format("HH"));
     console.log(currentTime);
 
@@ -32,7 +35,12 @@ $(function () {
             currentRow.addClass("future")
         }
 
+    
+        
     }
+
+   
+
 
 
 
