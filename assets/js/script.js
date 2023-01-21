@@ -1,6 +1,8 @@
 // variable for current date and time
 
-var currentDay = moment().format("LL")
+var currentDay = moment().format("LL");
+
+
 
 // Sets currentDay div to display current day 
 
@@ -11,6 +13,7 @@ var currTime = parseInt(moment().format("HH"));
 var rows = $('.row')
 
 $(function () {
+    
 
     var textArea = $('<textarea class ="description" name ="description" cols = "3" wrap="hard">');
         textArea.insertBefore(".saveBtn");
@@ -35,8 +38,8 @@ $(function () {
             currentRow.addClass("future")
         }
 
-        stringedNum = (9 + i).toString();
-        localPull = localStorage.getItem(stringedNum)
+        var stringedNum = (9 + i).toString();
+        var localPull = localStorage.getItem(stringedNum)
 
         currentRow.children('textarea').text(localPull);
     }
@@ -48,9 +51,9 @@ $('.saveBtn').on('click', function() {
 
     
 
-    rowToSave = $(this).closest('.row');
+    var rowToSave = $(this).closest('.row');
     console.log("Row to save is " + rowToSave.attr('data-number'));
-    saveText = rowToSave.children('.description').val();
+    var saveText = rowToSave.children('.description').val();
     if (saveText == "") {
         alert("This timeblock is empty!")
     } else {
@@ -60,9 +63,7 @@ $('.saveBtn').on('click', function() {
     localStorage.setItem(storageBlock, saveText)
 })
 
-var localPull 
-var stringedNum
 
-var saveText
-var rowToSave
+
+
 
