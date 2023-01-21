@@ -34,16 +34,19 @@ $(function () {
         } else if (dataNum > currentTime) {
             currentRow.addClass("future")
         }
-
-    
-        
     }
-
-   
-
-
-
-
-
 })
+
+
+
+$('.saveBtn').on('click', function() {
+    rowToSave = $(this).closest('.row');
+    console.log("Row to save is ")
+    saveText = rowToSave.children('.description').val();
+    var storageBlock = rowToSave.attr('data-number')
+    localStorage.setItem(storageBlock, saveText)
+})
+
+var saveText
+var rowToSave
 
