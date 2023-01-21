@@ -113,12 +113,12 @@ textarea:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .saveBtn i {
   color: white;
   width: 80px;
+  
 
 
 }
@@ -126,7 +126,9 @@ textarea:focus {
 .saveBtn:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+  
 }
+
 
 .clearRow {
   display: flex;

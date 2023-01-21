@@ -56,7 +56,7 @@ $('.saveBtn').on('click', function() {
 
     var rowToSave = $(this).closest('.row');
     console.log("Row to save is " + rowToSave.attr('data-number'));
-    var saveText = rowToSave.children('.description').val();
+    var saveText = rowToSave.children('.description').val().trim();
     if (saveText == "") {
         alert("This timeblock is empty!")
     } else {
