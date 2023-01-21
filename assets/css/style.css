@@ -15,6 +15,10 @@ textarea {
   overflow-wrap: normal;
 }
 
+textarea:focus {
+  outline: none;
+}
+
 
 
 .jumbotron {
