@@ -10,7 +10,9 @@ textarea {
   resize: none;
   color: #000000;
   border-left: 1px solid black;
-  padding: 10px;
+  padding: 5px;
+  line-height: 1.5;
+  overflow-wrap: normal;
 }
 
 
@@ -30,6 +32,9 @@ textarea {
 
 .description {
   white-space: pre-wrap;
+  width: 86%;
+  height: 78px;
+  border: none;
 }
 
 #currentDay {
@@ -90,16 +95,28 @@ textarea {
 
 .saveBtn {
   border-left: 1px solid black;
+  border-radius: 0px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
   height: 80px;
   width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
 }
 
-.saveBtn i:hover {
+.saveBtn i {
+  color: white;
+  width: 80px;
+
+
+}
+
+.saveBtn:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }

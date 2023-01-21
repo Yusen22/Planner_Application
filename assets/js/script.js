@@ -12,7 +12,7 @@ var rows = $('.row')
 
 $(function () {
 
-    var textArea = $('<textarea class="description">');
+    var textArea = $('<textarea class ="description" name ="description" cols = "3" wrap="hard">');
         textArea.insertBefore(".saveBtn");
 
     var currentTime = parseInt(moment().format("HH"));
