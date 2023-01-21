@@ -6,26 +6,36 @@ var currentDay = moment().format("LL")
 
 $('#currentDay').text(currentDay)
 
+var currTime = parseInt(moment().format("HH"));
 
+var rows = $('.row')
 
 $(function () {
 
-    function currentTime() {
-        return moment().format("HH")
-    }
-    
-    currentTime();
-
-    var containerChildren = $('.container-fluid').children()
+    var currentTime = parseInt(moment().format("HH"));
+    console.log(currentTime);
 
     for (var i = 0; i < 10; i++) {
-        
-        containerChildren.eq(i).attr('data-number', containerChildren[i].i = i + 9); 
 
-        
+        var currentRow = rows.eq(i)
+        currentRow.attr('data-number', rows[i].i = i + 9);
+
+        var dataNum = parseInt(currentRow.attr("data-number"));
+        console.log(dataNum);
+
+        if (dataNum < currentTime) {
+            currentRow.addClass("past")
+        } else if (dataNum == currentTime) {
+            currentRow.addClass("present")
+
+        } else if (dataNum > currentTime) {
+            currentRow.addClass("future")
+        }
+
     }
 
 
-    // if (currentTime < )
+
 
 })
+
