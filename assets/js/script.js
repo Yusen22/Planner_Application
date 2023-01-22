@@ -64,7 +64,7 @@ $('.saveBtn').on('click', function () {
     var saveText = rowToSave.children('.description').val().trim();
 
     // If statement that alerts user if no text exists to be saved, and alerts the user what existing text is to be saved and at what time 
-    if (saveText == "") {
+    if (saveText == "" || saveText == " ") {
         alert("This timeblock is empty!")
     } else {
         alert("You've saved the task " + "'" + saveText + "'" + " at " + rowToSave.attr('id'))
@@ -84,7 +84,7 @@ $('.clear-button').on('click', function () {
     // If true, local storage is cleared and the textareas are made to be an empty string
     if (clearConfirm === true) {
         localStorage.clear();
-        $('textarea').text(' ')
+        $('textarea').text(" ")
     }
 })
 
