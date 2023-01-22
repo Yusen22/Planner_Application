@@ -7,9 +7,10 @@ This project provides a daily planner application that allows the user to enter 
 
 Additional functionality displays the current day in the header of the application, and a button option to clear all present planner entries. 
 
-The application can be accessed here: https://yusen22.github.io/Coding_Quiz/
 
-A screenshot of the application can be viewed here: ![Screenshot-of-coding-quiz](./assets/Coding_quiz_index_screenshot.png "Screenshot of application")
+The application can be accessed here: https://yusen22.github.io/Planner_Application/
+
+A screenshot of the application can be viewed here: ![Screenshot-of-planner-app](./images/Screenshot_20230122_122235.png "Screenshot of application")
 
 
 
